@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Service";
+}
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <p class="m-0 text-white">
+            Handpicked from trusted farms, our beans are 100% organic, freshly roasted,
+            and crafted to deliver a naturally rich and satisfying taste.
+        </p>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white">
+                    Sourced from the finest farms, our beans are 100% organic, freshly roasted,
+                    and bursting with rich, natural flavor in every sip.
+                </p>
+            </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Service Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Services</h4>
+            <h1 class="display-4">Fresh & Organic Beans</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="~/Content/img/service-1.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h4><i class="fa fa-truck service-icon"></i>Fastest Door Delivery</h4>
+                        <p class="m-0">
+                            From our roastery to your doorstep — enjoy piping hot brews or 
+                            freshly packed beans delivered quickly, safely, and right on time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="~/Content/img/service-2.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
+                        <p class="m-0">
+                            Our coffee beans are freshly roasted in small batches to lock in aroma and taste, 
+                            giving you the perfect brew every single time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="~/Content/img/service-3.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
+                        <p class="m-0">
+                            We take pride in every cup — from sourcing premium beans to perfecting the roast — 
+                            to ensure you experience the finest quality coffee every time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="~/Content/img/service-4.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
+                        <p class="m-0">
+                            Skip the wait and reserve your favorite spot in just a few clicks — 
+                            our easy online booking ensures your coffee moments are always stress-free.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+<!-- Offer Start -->
+<div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
+    <div class="container py-5">
+        <h1 class="display-3 text-primary mt-3">50% OFF</h1>
+        <h1 class="text-white mb-3">Sunday Special Offer</h1>
+        <h4 class="text-white font-weight-normal mb-4 pb-3">Only for Sunday from 1st June to 30th June 2025</h4>
+        <form asp-action="CheckEmail" method="post" style="width: 100%;">
+            <div class="input-group">
+                <input type="email" name="email" class="form-control border-light" style="padding: 25px;" placeholder="Enter Your Email" required>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                </div>
+            </div>
+        </form>
+
+        @if (TempData["Message"] != null)
+        {
+            <p style="color: green">@TempData["Message"]</p>
+        }
+        @*<form class="form-inline justify-content-center mb-4">
+            <div class="input-group">
+                <input type="text" class="form-control p-4" placeholder="Enter Your Email" style="height: 60px;">
+                <div class="input-group-append">
+                    <button class="btn btn-primary font-weight-bold px-4" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </form>*@
+    </div>
+</div>
+<!-- Offer End -->
